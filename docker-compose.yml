@@ -34,6 +34,9 @@ services:
     environment:
       PUID: ${PUID}
       PGID: ${PGID}
+      LETSENCRYPT_HOST: uploader-api.kompjutek.site
+      LETSENCRYPT_EMAIL: michalkolar.su@seznam.cz
+      VIRTUAL_HOST: uploader.kompjutek.site
   php:
     build: './docker/php'
     restart: always
@@ -51,3 +54,7 @@ services:
 networks:
   uploader-network:
     driver: bridge
+  default:
+    external:
+      name: nginx-proxy
+
