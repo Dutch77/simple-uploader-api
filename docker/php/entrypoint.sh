@@ -1,4 +1,3 @@
-echo "TEST vooleeee"
 if [ ${PUID:-0} -ne 0 ] && [ ${PGID:-0} -ne 0 ]; then \
     userdel -f www-data &&\
     if getent group www-data ; then groupdel www-data; fi &&\
