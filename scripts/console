@@ -1,0 +1,1 @@
+docker-compose exec php bash -c "/web/bin/console $1"
